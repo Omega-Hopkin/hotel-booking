@@ -240,10 +240,10 @@ DELETE /bookings/cancel/{id}                  - Annuler une réservation
 ## 📸 Screenshots
 
 ### Page d'accueil
-![Homepage](photos/homepage.png)
+![Homepage](photos/accueil.png)
 
 ### Chambres disponibles
-![Rooms](photos/rooms.png)
+![Rooms](photos/réservations.png)
 
 ### Panel administrateur
 ![Admin Dashboard](photos/admin.png)
