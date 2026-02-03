@@ -1,0 +1,85 @@
+### Register User
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "admin",
+    "phoneNumber": "+96758467635",
+    "name": "Denn Jackson",
+    "role": "ADMIN" 
+}
+
+### 
+POST http://localhost:8080/auth/register
+Content-Type: application/json
+{
+    "email": "mary@gmail.com",
+    "password": "mary",
+    "phoneNumber": "+26758467625",
+    "name": "Mary Watson",
+    "role": "USER" 
+}
+
+### Login
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+{
+    "email": "admin@gmail.com",
+    "password": "admin"
+}
+
+### Register User
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+{
+    "email": "mary@gmail.com",
+    "password": "mary"
+}
+
+
+### Get All Users
+GET http://localhost:8080/users/all
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MjUzOTI0NzMsImV4cCI6MTcyNTQwMjU1M30.bpkz659ho0n50h04FQo86JWDFUYqSYYanoY9YhcJnec
+
+
+### Get User by id
+GET http://localhost:8080/users/get-by-id/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MjUzMDc2NzEsImV4cCI6MTcyNTMxNzc1MX0.-0ePH5Rz2ThyI02w_d6yZQaM1F9OMXism3eapM06B3I
+
+
+### Get logged in
+GET http://localhost:8080/users/get-logged-in-profile-info
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJ5QGdtYWlsLmNvbSIsImlhdCI6MTcyNTMwODc5MCwiZXhwIjoxNzI1MzE4ODcwfQ.6HXSHRkZIp37oOQc37wBCtTCryQtVH9YI6yCvgHThrU
+
+
+### Delete user
+GET http://localhost:8080/users/delete/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtYXJ5QGdtYWlsLmNvbSIsImlhdCI6MTcyNTMwOTIxNCwiZXhwIjoxNzI1MzE5Mjk0fQ.TH5Q11q1jwZEm-w2f7nXLJ21GkLDAyaEEHXgua8L2DQ
+
+
+### send
+POST http://localhost:8080/rooms/add
+Content-Type: multipart/form-data
+
+--boundary
+Content-Disposition: form-data; name="photo"; filename="room.jpg"
+Content-Type: image/jpeg
+
+< C:/Users/dell/Desktop/room2.jpeg
+--boundary
+Content-Disposition: form-data; name="roomType"
+
+Family
+--boundary
+Content-Disposition: form-data; name="roomPrice"
+
+1300
+--boundary
+Content-Disposition: form-data; name="roomDescription"
+
+A lovely familly room
+--boundary--
+
+### Get room by id
+GET http://localhost:8080/rooms/room-by-id/1
